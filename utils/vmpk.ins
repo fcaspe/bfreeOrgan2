@@ -1,0 +1,33 @@
+; bfreeOrgan2 Instrument definition for VMPK.
+; Controls assigned following the table at:
+; https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2
+; Version: 1.0
+; Copyright:
+.Patch Names
+[Bank0]
+0=bfreeOrgan2
+1=Orchestra
+.Controller Names
+[Standard]
+1=1-Modulation
+4=4-Foot controller (Volume)
+7=7-Volume
+20=20-Drawbar 16'
+21=21-Drawbar 5 1/3'
+22=22-Drawbar 8'
+23=23-Drawbar 4'
+24=24-Drawbar 2 2/3'
+25=25-Drawbar 2'
+26=26-Drawbar 1 3/5'
+27=27-Drawbar 1 1/3'
+28=28-Drawbar 1'
+64=64-Pedal (sustain)
+;Sustain is >63 =ON, OFF otherwise
+70=70-Chorus ON/OFF
+;Chorus is >63 =ON, OFF otherwise
+71=71-Chorus Rate
+72=72-Chorus Depth
+.Instrument Definitions
+[bfreeOrgan2]
+Control=Standard
+Patch[0]=Bank0

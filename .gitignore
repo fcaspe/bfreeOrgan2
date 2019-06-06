@@ -1,0 +1,4 @@
+# ignore all executables
+*/bin/*
+#ignore docs
+docs/*
