@@ -1,38 +1,58 @@
-# flexYnth
-## A flexible synthesizer development library.
+# bfreeOrgan2
+## A flexYnth-based Tonewheel Organ Synthesizer
+### By Franco Caspe (francocaspe@hotmail.com)
 
-**flexYnth** is a **C++** library aimed for multi-plattform synthesizer software development.  
+**bfreeOrgan2** is a C++ additive syntesizer project based on the **flexYnth** development library.
 
-The library is divided into two set of base classes called **Engine Scheme** and **Synthesizer Scheme** that once implemented yield a
-**Synthesizer Engine** and a **Synthesis Architecture** respectively.
+## Introduction
+I love the Hammond Organ! but (to date, June 2019) there was no open-source homebrew box that implements a nice Drawbar Organ, so I decided to code one myself.
 
-![](img/1.png)
-
-<center> **Example of a Synthesizer and Engine class scheme and some of its members and interaction.** </center>
+In the efforts of doing so, I learned a lot of efficient programming on C++ so I opted to create a base library to modularize the code, and to allow me to easily 
+expand this project in the future, or to develop new synths! Thus creating **flexYnth** and **bfreeOrgan2**.
 
 ## Scope
-This project is specially developed to ease and somewhat standardize the development of DIY synthesizer boxes based on DSP or
-microcontrollers. The idea came while researching onto some nice electronic synthesizer projects out there in the net.  
-I realized that could be really benefical if there'd be a way to solve the hardware and software implementation separately.
+This project implements a modularly-coded tonewheel drawbar organ synthesizer, implemented on two different **flexYnth Engines**, each one in different branches.
+1. A Linux/ALSA testbench implementation.
+2. A STM32F4 Discovery Board Implementation.
 
-*A PC/Linux Synthesizer Engine is also offered for Synthesis Architecture testing.*
+## Features
 
-### Usage Examples
+ * 10 voice Polyphony.
+ * Real time 9 Drawbar control.
+ * Chorus effect with adjustable Rate and Amplitude.
+ * Envelope and Optional Click Generator.
+ * Commands are controled over MIDI CC's. (See the MIDI mapping in utils/vmpk.ins)
+ * 16bit@48Khz Mono output.
 
-- Provided we have a completed **Synthesizer Engine** developed and tested for a specific HW/OS plattform
-(i.e.: Arduino box, Custom PCB, PC running Linux) we can implement any existing **Synthesis Architecture** on it.
+# Build it!
 
-![](img/2.png)
-<center> **Different Synthesis Architectures can connect to an unique Engine at compile time.** </center>
+## On Linux/ALSA:
 
-- You may want to expand/simplify an existing Synthesizer Project capabilities, updating the controls, the motherboard, the DAC,
-the CPU. In this case you should want to code a new **Synthesizer Engine** following the **Engine Scheme** provided with **flexYnth**.
+NOTE: Make sure you have the Alsa Development Libs installed.
 
-![](img/3.png)
-<center> **HW can be upgraded just by developing a new Engine. (i.e. for polyphony expansion, a new PCB, more inputs, ...)** </center>
+*FIRST switch to the linux_alsa branch:* 
 
-- It's easy to develop a **Synthesis Architecture** with the **Synthesizer Scheme** provided with **flexYnth**.
-You can take advantage of the existing **Linux Engine** for testing purposes.
+1. Run: 'git checkout linux_alsa'
+2. Run 'make'
+3. Execute the testbench: './bin/testbench'
 
-![](img/4.png)
-<center> **ALSA/Linux Engine allows for out-of-board Architecture debugging.** </center>
+An ALSA MIDI port will open for you to connect your favorite controller! ( I use alsaconnectgui )
+
+## For the Discovery STM32F407
+
+*FIRST switch to the Discovery_F407 branch.* 
+
+1. Run: 'git checkout Discovery_F407'
+
+NOTE: sure the arm-gcc toolset path is set in the PATH bash's enviroment variable when you run make.
+
+2. Run: 'make'
+3. Connect the STM32F4 Discovery Board to the PC.
+4. Run: 'make flash'
+
+After the Discovery Board is flashed, connect the User USB Port to your computer. It will recognize a MIDI Device.
+Route a controller to the MIDI input of the Board. The audio output is provided by the 3.5mm Jack of the Discovery Board.
+
+## License
+
+Released under Apache V2.0 License.
