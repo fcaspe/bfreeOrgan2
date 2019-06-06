@@ -4,7 +4,7 @@
 
 **bfreeOrgan2** is a C++ additive syntesizer project based on the **flexYnth** development library.
 
-## Introduction!
+## Introduction
 I love the Hammond Organ! but (to date, June 2019) there was no open-source homebrew box that implements a nice Drawbar Organ, so I decided to code one myself.
 
 In the efforts of doing so, I learned a lot of efficient programming on C++ so I opted to create a base library to modularize the code, and to allow me to easily 
