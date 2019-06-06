@@ -1,4 +1,6 @@
+#ignore object files
+*.o
 # ignore all executables
-*/bin/*
+bin/*
 #ignore docs
 docs/*
