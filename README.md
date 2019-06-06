@@ -42,7 +42,7 @@ An ALSA MIDI port will open for you to connect your favorite controller! ( I use
 
 *FIRST switch to the Discovery_F407 branch.* 
 
-1. Run: 'git checkout Discovery_F407'
+1. Run: 'git checkout discovery_f4'
 
 NOTE: sure the arm-gcc toolset path is set in the PATH bash's enviroment variable when you run make.
 
