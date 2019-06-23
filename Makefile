@@ -124,4 +124,4 @@ objdump:
 	$(OD) -d $	$(TARGET).elf >dump.lst
 
 flash: 
-	$(SF) write $(TARGET).bin 0x08000000
+	$(SF) write ./bin/$(TARGET).bin 0x08000000
