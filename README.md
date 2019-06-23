@@ -2,7 +2,7 @@
 ## A flexYnth-based Tonewheel Organ Synthesizer
 ### By Franco Caspe (francocaspe@hotmail.com)
 
-**bfreeOrgan2** is a C++ additive syntesizer project based on the **flexYnth** development library.
+**bfreeOrgan2** is a C++ coded, synchronous tonewheel organ synthesizer based on the **flexYnth** development library.
 
 ## Introduction
 I love the Hammond Organ! but (to date, June 2019) there was no open-source homebrew box that implements a nice Drawbar Organ, so I decided to code one myself.
@@ -40,7 +40,7 @@ An ALSA MIDI port will open for you to connect your favorite controller! ( I use
 
 ## For the Discovery STM32F407
 
-*FIRST switch to the Discovery_F407 branch.* 
+*FIRST switch to the Discovery STM32F407 Board branch.* 
 
 1. Run: 'git checkout discovery_f4'
 
