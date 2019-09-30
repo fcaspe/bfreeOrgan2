@@ -52,6 +52,9 @@ namespace synth
 			voice::sample_t get_sample() override;
 	
 			voice_organ();
+			
+			void set_attack(uint32_t value);
+			void set_release(uint32_t value);
 
 			private:
 			#ifdef CLICK_TEST

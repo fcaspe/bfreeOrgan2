@@ -54,6 +54,12 @@ namespace synth
 	constexpr uint8_t CC_ID_CHORUS_RATE = 71;
 	/** MIDI CC ID of Chorus Amplitude */
 	constexpr uint8_t CC_ID_CHORUS_DEPTH = 72;
+
+	/* TEST CC'S */
+	/** MIDI CC ID of Voice Envelope Attack*/
+	constexpr uint8_t CC_ID_ENV_ATTACK = 77;
+	/** MIDI CC ID of Voice Envelope Release */
+	constexpr uint8_t CC_ID_ENV_RELEASE = 78;
 	
 	/** @brief The bfreeorgan2 Synthesizer Architecture. 
 	*

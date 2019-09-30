@@ -119,6 +119,26 @@ namespace synth
 				{
 				fx.set_amplitude(cmd.value);
 				}
+			if(cmd.data == CC_ID_ENV_ATTACK)
+				{
+				std::for_each(oscillators.begin(),oscillators.end(),
+				[&](auto &osc)
+					{
+					//Extend it to 16bit.
+					const uint32_t env_value = static_cast<uint32_t>(cmd.value)<<8;
+					osc.set_attack(env_value);
+					});
+				}
+			if(cmd.data == CC_ID_ENV_RELEASE)
+				{
+				std::for_each(oscillators.begin(),oscillators.end(),
+				[&](auto &osc)
+					{
+					//Extend it to 16bit.
+					const uint32_t env_value = static_cast<uint32_t>(cmd.value)<<8;
+					osc.set_release(env_value);
+					});
+				}				
 			return;
 			}
 		}

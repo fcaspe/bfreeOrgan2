@@ -73,7 +73,16 @@ namespace synth
 			{
 			return _is_active;
 			}
-	
+		
+		void voice_organ::set_attack(uint32_t value)
+			{
+			envelope.set_speed(env::env_feature_t::ATTACK,value);
+			}
+		void voice_organ::set_release(uint32_t value)
+			{
+			envelope.set_speed(env::env_feature_t::RELEASE,value);
+			}
+				
 		inline sample_t voice_organ::get_sample()
 			{
 			if(_is_active == false)
