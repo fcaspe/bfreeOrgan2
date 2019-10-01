@@ -8,6 +8,9 @@
 
 ![](img/scheme.png)
 
+## Presentation
+[![Alt text](https://i.ytimg.com/vi/1dnvwjrLUrQ/hqdefault.jpg)](https://youtu.be/1dnvwjrLUrQ)
+
 ## Introduction
 I love the Hammond Organ! but as June 2019 there was no open-source homebrew box that implements a nice Drawbar Organ, so I decided to code one myself.
 
@@ -36,10 +39,11 @@ This project implements a modularly-coded tonewheel drawbar organ synthesizer, i
 
 1. Run: 'git checkout discovery_f4'
 
-NOTE: sure the arm-gcc toolset path is set in the PATH bash's enviroment variable when you run make.
-[ARM GCC Toolset website](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
+NOTE: Make sure the arm-gcc toolset path is set in the PATH enviroment variable when you run make.  
+[Get ARM GCC Toolset](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
 
-For Flashing the discovery, the makefile uses texane/stlink tool. The latest version that is currently working fine for the STM32F4 Discovery board is 1.3.0. [Texane's stlink utility](https://github.com/texane/stlink)
+For Flashing the discovery, the makefile uses texane/stlink toolThe latest version that is currently working fine for the STM32F4 Discovery board is 1.3.0.
+[Get Texane's stlink utility](https://github.com/texane/stlink)
 
 2. Run: 'make'
 3. Connect the STM32F4 Discovery Board to the PC.
