@@ -1,5 +1,5 @@
 # bfreeOrgan2
-## A flexYnth-based Tonewheel Organ Synthesizer
+## Drawbar Organ Synthesizer
 ### By Franco Caspe (francocaspe@hotmail.com)
 
 ![](img/logo.png)
@@ -8,7 +8,7 @@
 
 ![](img/scheme.png)
 
-## Presentation
+## Video Presentation
 [![Alt text](https://i.ytimg.com/vi/1dnvwjrLUrQ/hqdefault.jpg)](https://youtu.be/1dnvwjrLUrQ)
 
 ## Introduction
